@@ -1,19 +1,14 @@
+[![Build Status](https://travis-ci.com/alexeyvakarchuk/TimeKeeper.svg?token=hEJ3ZFzxz6hQFxCcRXxD&branch=master)](https://travis-ci.com/alexeyvakarchuk/TimeKeeper)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-Development(server+client):
+1. Install the dependensies:
 
 ```sh
-npm run dev
+yarn
 ```
 
-Production build(client):
+2. Run this for development(server+client):
 
 ```sh
-prod-frontend
-```
-
-Production(server):
-
-```sh
-prod-backend
+yarn run dev
 ```

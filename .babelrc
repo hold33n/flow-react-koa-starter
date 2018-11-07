@@ -1,16 +1,22 @@
 {
-  "presets": [
-    "env",
-    "flow",
-    ["es2015", {"modules": false}],
-    "stage-2",
-    "react"
-  ],
-  "plugins": ["react-hot-loader/babel",
-    "transform-regenerator"],
-  "env": {
-    "test": {
-      "presets": [["es2015"], "react"]
-    }
-  }
+  "presets": ["env", "react", "stage-0"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "store": "./redux/store",
+          "utils": "./views/utils",
+          "components": "./views/components",
+          "pages": "./views/pages",
+          "icons": "./views/icons"
+        }
+      }
+    ],
+    "transform-class-properties",
+    "transform-decorators",
+    "transform-react-constant-elements",
+    "transform-react-inline-elements"
+  ]
 }
