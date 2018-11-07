@@ -1,4 +1,4 @@
 // Usually served by Nginx
 const serve = require("koa-static");
 
-exports.init = app => app.use(serve("dist"));
+exports.init = app => app.use(serve(`${process.cwd()}/dist`));

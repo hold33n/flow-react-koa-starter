@@ -1,0 +1,56 @@
+.taskCard
+  width: 100%
+  padding: 16px 10px
+  // border-radius: 5px
+  // box-shadow: rgba(#25265E, .06) 0px 4px 24px
+  border-bottom: 1px solid #ECECEE
+  display: flex
+  align-items: center
+  // margin-bottom: 25px
+  &:last-child
+    border-bottom: none
+  // &:hover
+  //   .taskCard__tick
+  //     svg
+        
+
+  &__tick
+    height: 16px
+    width: 16px
+    display: block
+    margin-right: 12px
+    svg
+      display: block
+      width: 100%
+      fill: #e0e0e0
+      .tick
+        display: none
+    &:hover
+      cursor: pointer
+      svg
+        fill: $green-accent
+        .tick
+          display: block
+    &_done
+      svg
+        fill: $green-accent
+        .tick
+          display: block
+      
+  &__name
+    display: block
+    font-size: 14px
+    width: calc(100% - 34px - 24px)
+    cursor: default
+
+  &__timer
+    width: 18px
+    height: 18px
+    display: block
+    margin-left: 12px
+    svg
+      fill: #bdbdbd
+    &:hover
+      cursor: pointer
+      svg
+        fill: $green-accent

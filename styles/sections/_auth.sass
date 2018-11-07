@@ -1,0 +1,51 @@
+.auth
+  display: flex
+  flex-direction: column
+  align-items: center
+  height: 100vh
+  width: 100%
+  justify-content: center
+  background: linear-gradient(to top, #191919 0%, #272727 150%)
+  &__heading
+    font-size: 22px
+    margin-bottom: 25px
+    color: #ffffff
+  &__error-text
+    display: block
+    height: 16px
+    font-size: 13px
+    line-height: 16px
+    margin-bottom: 25px
+    color: #c62828
+  &__bottom-text
+    color: #bdbdbd
+    font-size: 14px
+    cursor: default
+    user-select: none
+    margin-top: 45px
+    span
+      margin-left: 6px
+      color: rgba($green-accent, .75)
+      cursor: pointer
+      &:hover
+        color: rgba($green-accent, .9)
+  &__divider
+    color: #bdbdbd
+    margin: 0 0 25px
+    width: 100%
+    text-align: center
+    width: 100%
+    max-width: 300px
+    font-size: 14px
+    user-select: none
+  &__socials
+    width: 100%
+    max-width: 300px
+    display: flex
+    align-items: center
+    justify-content: center
+    button
+      margin: 0 8px
+  .gradientButton
+    margin-top: 35px
+    margin-bottom: 25px

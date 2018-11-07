@@ -1,0 +1,77 @@
+.topbar
+  position: fixed
+  width: calc(100% - 80px)
+  top: 0
+  right: 0
+  background-color: #fff
+  height: 80px
+  padding: 0 30px
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  box-shadow: rgba(#25265E, .08) 0px 4px 20px
+  align-items: center
+  z-index: 10
+  &__timers
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    margin-right: 20px
+    position: relative
+    .dropdown
+      top: calc(100% + 10px)
+      right: 0
+      width: 320px
+      padding: 8px 15px
+    &-icon
+      display: inline-block
+      padding-right: 8px
+      cursor: pointer
+      user-select: none
+      svg
+        display: block
+        width: 20px
+        fill: #787993
+        box-sizing: content-box
+    &-counter
+      font-size: 14px
+      color: #787993
+      cursor: pointer
+      user-select: none
+    &.active
+      .topbar__timers-icon
+        svg
+          fill: $green-accent
+      .topbar__timers-counter
+        color: $green-accent
+
+  &__name
+    display: inline-block
+    align-items: center
+    justify-content: center
+    font-weight: 500
+    color: #173e43
+    font-size: 14px
+    cursor: pointer
+    position: relative
+    user-select: none
+    min-width: 120px
+    text-align: right
+    .dropdown
+      top: calc(100% + 10px)
+      right: 0
+      &:hover
+        color: $green-accent
+    &-icon
+      padding-left: 6px
+      display: inline-block
+      svg
+        display: block
+        width: 12px
+        fill: #173e43
+        box-sizing: content-box
+        // &:hover
+        //   fill: $green-accent
+    // &-label:hover +.topbar__name-icon .svg
+    //     fill: $green-accent
+      
