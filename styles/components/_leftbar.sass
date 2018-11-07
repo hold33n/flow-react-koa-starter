@@ -1,0 +1,49 @@
+.leftbar
+  position: fixed
+  width: 80px
+  top: 0
+  left: 0
+  background-color: $green-accent
+  height: 100%
+  &__logo
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #ffffff
+    background-color: #173e43
+    height: 80px
+    width: 100%
+    line-height: 60px
+    text-align: left
+    font-size: 30px
+    text-decoration: none
+    a
+      text-decoration: none
+
+  &__menu
+    width: 100%
+    height: calc(100% - 80px)
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    &-item
+      display: flex
+      width: 100%
+      line-height: 40px
+      text-align: left
+      a
+        color: #eeeeee
+        text-decoration: none
+        font-size: 14px
+        display: block
+        align-items: center
+        justify-content: center
+        padding: 20px 5px
+        display: flex
+        width: 100%
+        svg
+          display: block
+          height: 25px
+          fill: #fff
+      &.active a
+        background-color: rgba(#000, .1)

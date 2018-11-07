@@ -2,13 +2,13 @@ const path = require("path");
 const webpack = require("webpack");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-const HTMLPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const environment = process.env.NODE_ENV;
 
 let config = {
-  entry: ["babel-polyfill", "./index.js"],
+  mode: environment,
+  entry: ["webpack-hot-middleware/client", "babel-polyfill", "./index.js"],
   output: {
     publicPath: "/",
     filename: "bundle.js"
@@ -62,12 +62,6 @@ if (environment === "development") {
 
   config.watch = true;
 } else if (environment === "production") {
-  config.plugins.push(
-    new HTMLPlugin({
-      template: "./views/index.html",
-      inject: true
-    })
-  );
   config.plugins.push(
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/,

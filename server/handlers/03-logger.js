@@ -1,5 +1,8 @@
-
 // request/response logger
-const logger = require('koa-logger');
+const logger = require("koa-logger");
 
-exports.init = app => app.use(logger());
+exports.init = app => {
+  if (process.env.NODE_ENV !== "test") {
+    app.use(logger());
+  }
+};

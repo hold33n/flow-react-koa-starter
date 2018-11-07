@@ -1,0 +1,35 @@
+%defaultButton
+    display: inline-block
+    font-family: 'Montserrat', sans-serif
+    border: none
+    color: #ffffff
+    font-size: 13px
+    padding: 13px 33px
+    border-radius: 20px
+    outline: none
+    font-weight: 300
+    user-select: none
+    cursor: pointer
+    min-width: 100px
+
+
+.gradientButton
+    @extend %defaultButton
+    background-color: #5BB485
+    background-image: radial-gradient(circle farthest-side at bottom left, #10cc8d 0%, #5BB485 100%)
+    box-shadow: 0px 3px 20px rgba(#10cc8d, .3)
+    transition: all .15s ease
+    &:hover
+        box-shadow: 0px 4px 25px rgba(#10cc8d, .4)
+
+.outlineButton
+    @extend %defaultButton
+    color: $green-accent
+    background: transparent
+    border: 1px solid $green-accent
+    padding: 8px 15px
+    font-size: 12px
+    transition: all .15s ease
+    &:hover
+       background: $green-accent
+       color: #ffffff
